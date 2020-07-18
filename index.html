@@ -1,10 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Page</title>
+    <link rel="stylesheet" type="text/css" href="my_style.css" />
   </head>
   <body>
-    ― Hello World! &#x1F609;
+    <div id="menu-holder" class>
+      <a id="logo" href="/">
+        <img
+          src="//d3ot0t2g92r1ra.cloudfront.net/img/logo@3x_optimized.svg"
+          alt="Logo"
+        />
+      </a>
+      <div id="menu-holder-list" style="max-height: 0px;">
+        <!-- 404-->
+        <div id="main">
+          <div class="fof">
+            <span><b>404 Not Found &#128542;</b></span>
+            <h1>This page you were looking for doesn`t exist</h1>
+          </div>
+        </div>
+        <!-- 404-->
+      </div>
+      <div id="hamburger-menu-holder">
+        <!-- Insert hamburger-->
+        <input type="checkbox" class="toggler" />
+        <div class="hamburger"><div>U</div></div>
+        <div class="menu">
+          <div>
+            <ul>
+              <a>Uliana</a>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Log out</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Insert hamburger-->
+      </div>
+    </div>
+    <!--Message-->
+    <div class="container">
+      <div class="error">
+        <h2> 	&#10069 Error </h2>
+        <p>Something went wrong. Please try again later.</p>
+      </div>
+      <div class="Success">
+        <h2>&#10004 Success</h2>
+        <p>Profile was updated.</p>
+      </div>
+      <div class="Warning">
+        <h2>&#10004 Warning</h2>
+        <p>Deadline is coming.</p>
+      </div>
+    </div>
   </body>
 </html>
