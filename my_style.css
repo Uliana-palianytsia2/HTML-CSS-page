@@ -1,0 +1,231 @@
+#menu-holder {
+  padding-top: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  min-height: 50px;
+  background-color: #d3d3d3;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#logo {
+  position: relative;
+  width: 115px;
+  height: 33px;
+  top: 0;
+  left: 50px;
+  cursor: pointer;
+}
+/*hamburger*/
+.toggler {
+  z-index: 2;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  top: 0;
+  right: 50px;
+  cursor: pointer;
+  opacity: 0;
+}
+.hamburger {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  height: 40px;
+  width: 40px;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hamburger > div {
+  position: relative;
+  top: 0;
+  left: 0;
+  background: orange;
+  height: 40px;
+  width: 100%;
+  border-radius: 100px;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: "Avenir Next", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.menu {
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  background: white;
+  width: 0%;
+  height: 150px;
+  border: 2px solid #eee;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+}
+.toggler:checked ~ .menu {
+  width: 30%;
+}
+.menu > div > ul {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 30px;
+  padding-right: 10px;
+  visibility: hidden;
+}
+.menu > div > ul > li {
+  list-style: none;
+  padding: 0.5rem;
+}
+.menu > div > ul > li > a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "Avenir Next", sans-serif;
+}
+.menu > div > ul > a {
+  color: #b1a29f;
+  text-decoration: underline;
+  font-size: 2rem;
+  font-family: "Avenir Next", sans-serif;
+}
+.toggler:checked ~ .menu > div > ul {
+  transition: visibility 0.4s ease;
+  transition-delay: 0.1s;
+  visibility: visible;
+}
+.toggler:checked ~ .menu > div > ul > li > a:hover {
+  background-color: #dcdcdc;
+}
+/*hamburger*/
+
+/*404*/
+html {
+  height: 100%;
+}
+body {
+  font-family: "Avenir Next", sans-serif;
+  color: black;
+  margin: 0;
+}
+#main {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+.fof {
+  display: table-cell;
+  vertical-align: middle;
+}
+.fof span {
+  font-size: 30px;
+  display: block;
+}
+.fof h1 {
+  font-size: 15px;
+  display: block;
+}
+/*404*/
+
+/*Messages*/
+.container {
+  display: grid;
+  grid-gap: 10px;
+  font-family: "Avenir Next", sans-serif;
+  color: white;
+  max-width: 200px;
+  border-radius: 3px;
+  padding: 12px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.error {
+  border: 1px solid #eee;
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  background-color: #c3534e;
+}
+.error h2 {
+  margin: 0;
+  padding: 8px;
+  font-size: 1.2em;
+  border-radius: 7px 7px 0 0;
+}
+.error p {
+  margin: 0;
+  padding: 8px;
+}
+.Success {
+  border: 1px solid #eee;
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  background-color: #6bab69;
+}
+.Success h2 {
+  margin: 0;
+  padding: 8px;
+
+  font-size: 1.2em;
+  border-radius: 7px 7px 0 0;
+}
+.Success p {
+  margin: 0;
+  padding: 8px;
+}
+.Warning {
+  border: 1px solid #eee;
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  background-color: #eaaf51;
+}
+.Warning h2 {
+  margin: 0;
+  padding: 8px;
+  font-size: 1.2em;
+  border-radius: 7px 7px 0 0;
+}
+.Warning p {
+  margin: 0;
+  padding: 8px;
+}
+.Warning {
+  animation: Warning 2s 1;
+  -webkit-animation: Warning 2s 1;
+  animation-fill-mode: forwards;
+
+  animation-delay: 2s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+}
+@-webkit-keyframes Warning {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+  }
+}
